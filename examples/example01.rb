@@ -13,8 +13,7 @@ sleep(0.01)
 reset.on
 
 dc.off
-
-def initialize
+initialize()
 
 # """Reset the display."""
 # # Set reset high for a millisecond.
