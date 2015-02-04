@@ -54,6 +54,13 @@ def command(dc, data)
   end
 end
 
+def write(dc, data)
+  dc.on
+  PiPiper::Spi.begin do
+    write data
+  end
+end
+
 def start(dc)
     # 128x64 pixel specific initialization.
     command(dc, SSD1306_DISPLAYOFF)                    # 0xAE
