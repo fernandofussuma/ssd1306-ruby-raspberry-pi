@@ -96,3 +96,4 @@ command(dc, SSD1306_DISPLAYON)
 sleep(0.1)
 
 write(dc, 0x00)
+
