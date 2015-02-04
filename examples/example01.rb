@@ -3,8 +3,8 @@ require 'pi_piper'
 reset = PiPiper::Pin.new(:pin => 24, :direction => :out)
 dc = PiPiper::Pin.new(:pin => 23, :direction => :out)
 
-reset.off
-dc.off
+reset.on
+dc.on
 
 reset.on
 sleep(0.001)
