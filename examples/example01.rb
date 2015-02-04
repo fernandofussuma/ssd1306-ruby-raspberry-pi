@@ -42,7 +42,7 @@ dc = PiPiper::Pin.new(:pin => 23, :direction => :out)
 reset.on
 dc.on
 
-def reset
+def _reset
   reset.on
   sleep(0.001)
   reset.off
@@ -85,6 +85,6 @@ def start()
     command(SSD1306_NORMALDISPLAY)                 # 0xA6
 end
 
-reset()
+_reset()
 start()
 command(SSD1306_DISPLAYON)
