@@ -13,7 +13,7 @@ sleep(0.01)
 reset.on
 
 dc.off
-initialize()
+initializessd1306
 
 # """Reset the display."""
 # # Set reset high for a millisecond.
@@ -25,7 +25,7 @@ initialize()
 # # Set reset high again.
 # self._gpio.set_high(self._rst)
 
-def initialize
+def initializessd1306
 
   PiPiper::Spi.begin do
     write 0xAE
