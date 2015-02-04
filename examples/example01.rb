@@ -54,7 +54,7 @@ def command(dc, data)
   end
 end
 
-def start()
+def start(dc)
     # 128x64 pixel specific initialization.
     command(dc, SSD1306_DISPLAYOFF)                    # 0xAE
     command(dc, SSD1306_SETDISPLAYCLOCKDIV)            # 0xD5
@@ -84,6 +84,6 @@ end
 
 while true
   reset_ssd1306(reset)
-  start()
+  start(dc)
   command(dc, SSD1306_DISPLAYON)
 end
