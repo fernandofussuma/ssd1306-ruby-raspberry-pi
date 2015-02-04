@@ -82,8 +82,6 @@ def start(dc)
     command(dc, SSD1306_NORMALDISPLAY)                 # 0xA6
 end
 
-while true
-  reset_ssd1306(reset)
-  start(dc)
-  command(dc, SSD1306_DISPLAYON)
-end
+reset_ssd1306(reset)
+start(dc)
+command(dc, SSD1306_DISPLAYON)
