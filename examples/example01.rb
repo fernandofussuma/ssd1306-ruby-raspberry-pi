@@ -14,6 +14,8 @@ reset.on
 
 dc.off
 
+def initialize
+
 # """Reset the display."""
 # # Set reset high for a millisecond.
 # self._gpio.set_high(self._rst)
@@ -24,15 +26,17 @@ dc.off
 # # Set reset high again.
 # self._gpio.set_high(self._rst)
 
+def initialize
 
+  PiPiper::Spi.begin do
+    write 0xAE
+    write 0xD5
+    write 0x80
+    write 0x3F
+    write 0xD3
+    write 0x00
+    write 0xA6
+    write 0xAF
+  end
 
-PiPiper::Spi.begin do
-  write 0xAE
-  write 0xD5
-  write 0x80
-  write 0x3F
-  write 0xD3
-  write 0x00
-  write 0xA6
-  write 0xAF
 end
