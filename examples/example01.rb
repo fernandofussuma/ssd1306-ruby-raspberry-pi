@@ -92,3 +92,7 @@ end
 reset_ssd1306(reset)
 start(dc)
 command(dc, SSD1306_DISPLAYON)
+
+sleep(0.1)
+
+write(dc, 0x00)
